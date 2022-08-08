@@ -73,7 +73,15 @@ describe("MakerDao Dai L1 Escrow Balance and L2 Total Supply Check", () => {
   jest.setTimeout(10000);
 
   beforeAll(() => {
-    handleTransaction = provideHandleTransaction(L1_ARCHIVE_NODE, ARB_ARCHIVE_NODE, OPT_ARCHIVE_NODE);
+    handleTransaction = provideHandleTransaction(
+      L1_ARCHIVE_NODE,
+      ARB_ARCHIVE_NODE,
+      OPT_ARCHIVE_NODE,
+      ERC20_TRANSFER_EVENT,
+      daiDetails,
+      arbObject,
+      optObject
+    );
   });
 
   it("returns empty findings if there are no transfers to makerDao l1 escrow", async () => {
