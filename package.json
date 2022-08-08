@@ -1,7 +1,8 @@
 {
-  "name": "forta-agent-starter",
+  "name": "forta-makerDao-bridge-invariant-bot",
   "version": "0.0.1",
-  "description": "Forta Agent Typescript starter project",
+  "description": "Forta bot that detects transfers to Optimism and Arbitrum escrows on Ethereum, then checks balance on the respective layer 2's to ensure values are valid",
+  "repository": "https://github.com/syahirAmali/forta-makerDao-bridge",
   "chainIds": [
     1
   ],
@@ -25,12 +26,14 @@
     "format": "prettier --write \"src/**/*.ts\""
   },
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "forta-agent": "^0.1.9"
+    "forta-agent": "^0.1.9",
+    "lru-cache": "^7.13.2"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "@types/nodemon": "^1.19.0",
+    "dotenv": "^16.0.1",
+    "forta-agent-tools": "2.3.1",
     "jest": "^27.0.6",
     "nodemon": "^2.0.8",
     "prettier": "^2.7.1",
